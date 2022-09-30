@@ -10,6 +10,7 @@ resource "aws_security_group" "my_privat_sg" {
     to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["192.168.1.27/32"]
+    #cidr_blocks = [aws_instance.my_public_server.private_ip] ??? would it work here??
   }
 
   # OUTBOUT CONNECTIONS
